@@ -1,0 +1,46 @@
+---
+description: 
+globs: *.tsx
+alwaysApply: false
+---
+
+# Component Pattern Rule
+
+Follow this exact pattern for all React components in this project:
+
+## Structure
+
+1. Import `FC` from React
+2. Define a typed interface for props
+3. Use `FC<ComponentProps>` type annotation
+4. Destructure props in function parameters
+5. Return JSX
+6. Use default export
+
+## Example Pattern (based on Navbar.tsx)
+
+```typescript
+import { FC } from 'react'
+
+interface ComponentNameProps {
+	children: React.ReactNode
+	// Add other props as needed
+}
+
+const ComponentName: FC<ComponentNameProps> = ({ children }) => {
+	return <div>ComponentName</div>
+}
+
+export default ComponentName
+```
+
+## Rules
+
+- Always use `FC` type from React
+- Always define a typed interface for props
+- Always use destructuring for props
+- Always use default export
+- Follow the exact naming convention: `ComponentNameProps` for interface
+- Use PascalCase for component names
+- Use camelCase for prop names
+- Include proper TypeScript typing for all props
